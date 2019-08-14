@@ -1,25 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>LiveHelpNow_Help_Desk_Chat_Button</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license>GNU General Public License (GPL)</license>
     <channel>community</channel>
     <extends/>
     <summary>Chat with customers on your website using the top rated LiveHelpNow Chat System.</summary>
-    <description>LiveHelpNow is a responsive, reliable, and extremely affordable Help Desk Software for your website. The live chat button plugin adds click-to-chat functionality to your website, allowing you to interact directly with website visitors the same way you would in a traditional retail store. You wouldn't ignore customers in your store, so don't ignore the ones visiting your site every day!&#xD;
-&#xD;
-Chat with customers using any computer or mobile device and monitor website visitors in real-time using our Top Rated Chat System. Invite visitors to chat automatically or proactively, help them with product selection, and increase sales! When you're unavailable the chat button plugin switches to an 'offline mode' that allows visitors to leave you messages.&#xD;
-&#xD;
-This plugin is exclusively for the LiveHelpNow Chat System &amp; also integrates seamlessly with:&#xD;
-&#xD;
-- LiveHelpNow Ticket System&#xD;
-- LiveHelpNow Callback Request System</description>
-    <notes>Initial Release</notes>
+    <description>LiveHelpNow is a responsive, reliable, and extremely affordable Help Desk Software for your website. The live chat button plugin adds click-to-chat functionality to your website, allowing you to interact directly with website visitors the same way you would in a traditional retail store. You wouldn't ignore customers in your store, so don't ignore the ones visiting your site every day! Chat with customers using any computer or mobile device and monitor website visitors in real-time using our Top Rated Chat System. Invite visitors to chat automatically or proactively, help them with product selection, and increase sales! When you're unavailable the chat button plugin switches to an 'offline mode' that allows visitors to leave you messages. This plugin is exclusively for the LiveHelpNow Chat System &amp; also integrates seamlessly with: - LiveHelpNow Ticket System - LiveHelpNow Callback Request System</description>
+    <notes>Enhancements</notes>
     <authors><author><name>Eric Witchin</name><user>livehelpnow</user><email>plugins@livehelpnpw.com</email></author></authors>
-    <date>2013-04-04</date>
-    <time>15:57:10</time>
-    <contents><target name="magecommunity"><dir name="LHN"><dir name="Chat"><dir name="Block"><file name="Button.php" hash="d618e5c8ab98f59a43b0c658113da005"/></dir><dir name="Helper"><file name="Data.php" hash="37de04c73ab2798399cc75e87c5217fd"/></dir><dir name="etc"><file name="config.xml" hash="6829a398d8d80b95f44b5da38c4c5ead"/><file name="widget.xml" hash="0cf746414a534abf09a3588d3c5330f8"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="LHN_Chat.xml" hash="a8dafd55068822ec469356e6f8ebb55d"/></dir></target></contents>
+    <date>2013-04-11</date>
+    <time>16:45:51</time>
+    <contents><target name="magecommunity"><dir name="LHN"><dir name="Chat"><dir name="Block"><file name="Button.php" hash="37ef9ba0fe2bc7b628255d11dfa1ac11"/></dir><dir name="Helper"><file name="Data.php" hash="37de04c73ab2798399cc75e87c5217fd"/></dir><dir name="etc"><file name="config.xml" hash="6829a398d8d80b95f44b5da38c4c5ead"/><file name="widget.xml" hash="0cf746414a534abf09a3588d3c5330f8"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="LHN_Chat.xml" hash="a8dafd55068822ec469356e6f8ebb55d"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

@@ -52,6 +52,7 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 		$content .= 'var lhnCustom1 = "'.$lhnCustomer.'";'.PHP_EOL;
 		$content .= 'var lhnCustom2 = "'.$lhnEmail.'";'.PHP_EOL;
 		$content .= 'var lhnCustom3 = "'.$lhnCart.'";'.PHP_EOL;
+		$content .= 'var lhnPlugin = "Mage-'.Mage::getVersion().'-Chat";'.PHP_EOL;
 		$content .= 'var lhnTrackingEnabled = "t";'.PHP_EOL;
 		$content .= 'var lhnScriptSrc = lhnJsHost + "www.livehelpnow.net/lhn/scripts/livehelpnow.aspx?lhnid=" + lhnAccountN + "&iv=" + lhnInviteEnabled + "&d=" + lhnDepartmentN + "&ver=" + lhnVersion + "&rnd=" + Math.random();'.PHP_EOL;
 		$content .= 'lhnLoadEvent = addLHNButton(lhnScriptSrc,"append");'.PHP_EOL;
