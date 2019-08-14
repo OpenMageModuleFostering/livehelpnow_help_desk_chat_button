@@ -8,7 +8,7 @@
 				<required>1</required>
 				<visible>1</visible>
 				<label>LiveHelpNow Account Number</label>
-				<description><![CDATA[* Must be numeric<br /><a href="http://www.livehelpnow.net/lnd/trial.aspx" target="_blank">Sign Up</a>]]></description>
+				<description><![CDATA[* Must be numeric<br /><a href="http://www.livehelpnow.net/lnd/trial.aspx" target="_blank">Sign Up</a> if you do not have a LiveHelpNow account]]></description>
 				<type>text</type>
 			</account_number>
 			<button_number translate="label">
