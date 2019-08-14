@@ -38,8 +38,8 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 		$content .= '</div>'.PHP_EOL;
 		$content .= '<!--You may install the following code in an external JavaScript file if you like-->'.PHP_EOL;
 		$content .= '<script type="text/javascript">'.PHP_EOL;
-		$content .= 'if(typeof lhnChatButton == "undefined"){'.PHP_EOL;
-		$content .= 'var lhnChatButton = 1;'.PHP_EOL;
+		$content .= 'if(typeof lhnButtonCheck == "undefined"){'.PHP_EOL;
+		$content .= 'var lhnButtonCheck = 1;'.PHP_EOL;
 		$content .= 'var lhnAccountN = '. $lhn_account .';'.PHP_EOL;
 		$content .= 'var lhnButtonN = '. $lhn_button .';'.PHP_EOL;
 		$content .= 'var lhnVersion = 5.3; '.PHP_EOL;
@@ -55,9 +55,9 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 		$content .= 'var lhnPlugin = "Mage-'.Mage::getVersion().'-Chat";'.PHP_EOL;
 		$content .= 'var lhnTrackingEnabled = "t";'.PHP_EOL;
 		$content .= 'var lhnScriptSrc = lhnJsHost + "www.livehelpnow.net/lhn/scripts/livehelpnow.aspx?lhnid=" + lhnAccountN + "&iv=" + lhnInviteEnabled + "&d=" + lhnDepartmentN + "&ver=" + lhnVersion + "&rnd=" + Math.random();'.PHP_EOL;
-		$content .= 'lhnLoadEvent = addLHNButton(lhnScriptSrc,"append");'.PHP_EOL;
+		$content .= 'lhnLoadEvent = addLHNButton(lhnScriptSrc,"append", lhnJsHost, lhnAccountN);'.PHP_EOL;
 		$content .= '}else{'.PHP_EOL;
-		$content .= 'lhnLoadEvent = addLHNButton('.$lhn_button.',"insert");'.PHP_EOL;
+		$content .= 'lhnLoadEvent = addLHNButton('.$lhn_button.',"insert", lhnJsHost, lhnAccountN);'.PHP_EOL;
 		$content .= '}'.PHP_EOL;
 		$content .= 'if (window.addEventListener) {'.PHP_EOL;
 		$content .= 'window.addEventListener("load", function () {'.PHP_EOL;
@@ -68,7 +68,7 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 		$content .= 'lhnLoadEvent;'.PHP_EOL;
 		$content .= '});'.PHP_EOL;
 		$content .= '}'.PHP_EOL;
-		$content .= 'function addLHNButton(lhnbutton, lhntype){'.PHP_EOL;
+		$content .= 'function addLHNButton(lhnbutton, lhntype, lhnJsHost, lhnAccountN){'.PHP_EOL;
 		$content .= 'element = document.getElementById("lhnContainer");'.PHP_EOL;
 		$content .= 'element.id = "lhnContainerDone";'.PHP_EOL;
 		$content .= 'if(lhntype == "insert"){'.PHP_EOL;
