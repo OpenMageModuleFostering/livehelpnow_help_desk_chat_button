@@ -8,12 +8,14 @@
 				<required>1</required>
 				<visible>1</visible>
 				<label>LiveHelpNow Account Number</label>
+				<description><![CDATA[* Must be numeric<br /><a href="http://www.livehelpnow.net/lnd/trial.aspx" target="_blank">Sign Up</a>]]></description>
 				<type>text</type>
 			</account_number>
 			<button_number translate="label">
 				<required>1</required>
 				<visible>1</visible>
 				<label>LiveHelpNow Button Number</label>
+				<description><![CDATA[* Must be numeric<br /><a href="http://www.livehelpnow.net/products/live_chat_system/buttons/" target="_blank">View Buttons</a>]]></description>
 				<type>text</type>
 			</button_number>
 		</parameters>
