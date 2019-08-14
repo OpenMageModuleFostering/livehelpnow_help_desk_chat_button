@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <LHN_Chat>
+      <active>true</active>
+      <codePool>community</codePool>
+      <depends>
+      	<Mage_Cms />
+      </depends>
+    </LHN_Chat>
+  </modules>
+</config>

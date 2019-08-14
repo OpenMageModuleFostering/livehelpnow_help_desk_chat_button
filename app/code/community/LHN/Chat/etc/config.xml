@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<LHN_Chat>
+			<version>1.0</version>
+		</LHN_Chat>
+	</modules>
+	<global>
+		<helpers>
+			<chat>
+				<class>LHN_Chat_Helper</class>
+			</chat>
+		</helpers>
+		<blocks>
+			<chat>
+				<class>LHN_Chat_Block</class>
+			</chat>
+		</blocks>
+	</global>
+</config>

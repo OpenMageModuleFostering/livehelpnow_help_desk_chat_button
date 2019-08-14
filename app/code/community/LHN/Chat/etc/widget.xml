@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<widgets>
+	<chat_button type="chat/button">
+		<name>LiveHelpNow Help Desk -- Chat Button</name>
+		<description type="desc">Adds a LiveHelpNow Chat button to your website</description>
+		<parameters>
+			<account_number translate="label">
+				<required>1</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Account Number</label>
+				<type>text</type>
+			</account_number>
+			<button_number translate="label">
+				<required>1</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Button Number</label>
+				<type>text</type>
+			</button_number>
+		</parameters>
+	</chat_button>
+</widgets>

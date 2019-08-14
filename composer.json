@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/LiveHelpNow_Help_Desk_Chat_Button",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Chat with customers on your website using the top rated LiveHelpNow Chat System.",
+    "authors": [
+    {
+        "name": "Eric Witchin",
+        "email": "plugins@livehelpnpw.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
