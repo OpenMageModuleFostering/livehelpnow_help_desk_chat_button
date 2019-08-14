@@ -3,16 +3,17 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 	protected function _toHtml(){
 		$lhn_account = $this->getData('account_number');
 		$lhn_button = $this->getData('button_number');
+		$lhn_invite = $this->getData('invite');
+		$lhn_invite = empty($lhn_invite) ? "0" : "1";
+		$lhn_window = $this->getData('window_number');
+		$lhn_window = empty($lhn_window) ? "0" : $lhn_window;
+		$lhn_invitation = $this->getData('invitation_number');
+		$lhn_invitation = empty($lhn_invitation) ? "0" : $lhn_invitation;
+		$lhn_department = $this->getData('department_number');
+		$lhn_department = empty($lhn_department) ? "0" : $lhn_department;
 		
 		$lhn_account = str_replace("lhn","",strtolower($lhn_account));
-	  
-		if(substr($lhn_account, -2)=="-1"){
-		    $subText = "";
-		}else{
-		    $subText = '<div style="font-size:10px;"><a title="Help desk software" href="http://www.LiveHelpNow.net/" style="font-size:10px;" target="_blank">Help desk software</a></div>';
-		}
-		$lhn_account = str_replace("-1","",$lhn_account);
-		
+				
 		$lhnEmail = "";
 		$lhnCustomer = "";
 		$lhnCart = "";
@@ -30,58 +31,21 @@ class LHN_Chat_Block_Button extends Mage_Core_Block_Abstract implements Mage_Wid
 			$lhnCart .= urlencode("Subtotal: $".$cart['subtotal']);
 		}
 	  
-		$content = PHP_EOL.'<!--start http://www.livehelpnow.net  -->'.PHP_EOL;
-		$content .= '<!--This DIV object will show the live chat button, have it placed in the location on your website where you would like the live chat button to show-->'.PHP_EOL;
-		$content .= '<div id="lhnContainer" style="text-align:center;">'.PHP_EOL;
-		$content .= '<div id="lhnChatButton"></div>'.PHP_EOL;
-		$content .= $subText.PHP_EOL;
-		$content .= '</div>'.PHP_EOL;
-		$content .= '<!--You may install the following code in an external JavaScript file if you like-->'.PHP_EOL;
-		$content .= '<script type="text/javascript">'.PHP_EOL;
-		$content .= 'if(typeof lhnButtonCheck == "undefined"){'.PHP_EOL;
-		$content .= 'var lhnButtonCheck = 1;'.PHP_EOL;
-		$content .= 'var lhnAccountN = '. $lhn_account .';'.PHP_EOL;
+		$content = '<script type="text/javascript">'.PHP_EOL;
+		$content .= 'var lhnAccountN = "'. $lhn_account .'";'.PHP_EOL;
 		$content .= 'var lhnButtonN = '. $lhn_button .';'.PHP_EOL;
-		$content .= 'var lhnVersion = 5.3; '.PHP_EOL;
-		$content .= 'var lhnJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");'.PHP_EOL; 
-		$content .= 'var lhnInviteEnabled = 0;'.PHP_EOL;
-		$content .= 'var lhnInviteChime = 0;'.PHP_EOL;
-		$content .= 'var lhnWindowN = 0;'.PHP_EOL;
-		$content .= 'var lhnDepartmentN = 0;'.PHP_EOL;
-		$content .= 'var lhnCustomInvitation = "";'.PHP_EOL;
+		$content .= 'var lhnInviteEnabled = '.$lhn_invite.';'.PHP_EOL;
+		$content .= 'var lhnWindowN = '.$lhn_window.';'.PHP_EOL;
+		$content .= 'var lhnInviteN = '.$lhn_invitation.';'.PHP_EOL;
+		$content .= 'var lhnDepartmentN = '.$lhn_department.';'.PHP_EOL;
 		$content .= 'var lhnCustom1 = "'.$lhnCustomer.'";'.PHP_EOL;
 		$content .= 'var lhnCustom2 = "'.$lhnEmail.'";'.PHP_EOL;
 		$content .= 'var lhnCustom3 = "'.$lhnCart.'";'.PHP_EOL;
 		$content .= 'var lhnPlugin = "Mage-'.Mage::getVersion().'-Chat";'.PHP_EOL;
-		$content .= 'var lhnTrackingEnabled = "t";'.PHP_EOL;
-		$content .= 'var lhnScriptSrc = lhnJsHost + "www.livehelpnow.net/lhn/scripts/livehelpnow.aspx?lhnid=" + lhnAccountN + "&iv=" + lhnInviteEnabled + "&d=" + lhnDepartmentN + "&ver=" + lhnVersion + "&rnd=" + Math.random();'.PHP_EOL;
-		$content .= 'lhnLoadEvent = addLHNButton(lhnScriptSrc,"append", lhnJsHost, lhnAccountN);'.PHP_EOL;
-		$content .= '}else{'.PHP_EOL;
-		$content .= 'lhnLoadEvent = addLHNButton('.$lhn_button.',"insert", lhnJsHost, lhnAccountN);'.PHP_EOL;
-		$content .= '}'.PHP_EOL;
-		$content .= 'if (window.addEventListener) {'.PHP_EOL;
-		$content .= 'window.addEventListener("load", function () {'.PHP_EOL;
-		$content .= 'lhnLoadEvent;'.PHP_EOL;
-		$content .= '});'.PHP_EOL;
-		$content .= '}else{'.PHP_EOL;
-		$content .= 'window.attachEvent("onload", function () {'.PHP_EOL;
-		$content .= 'lhnLoadEvent;'.PHP_EOL;
-		$content .= '});'.PHP_EOL;
-		$content .= '}'.PHP_EOL;
-		$content .= 'function addLHNButton(lhnbutton, lhntype, lhnJsHost, lhnAccountN){'.PHP_EOL;
-		$content .= 'element = document.getElementById("lhnContainer");'.PHP_EOL;
-		$content .= 'element.id = "lhnContainerDone";'.PHP_EOL;
-		$content .= 'if(lhntype == "insert"){'.PHP_EOL;
-		$content .= 'var lhnScript = document.createElement("a");lhnScript.href = "#";lhnScript.onclick = function(){OpenLHNChat();return false;};'.PHP_EOL;
-		$content .= 'lhnScript.innerHTML = "<img id=\"lhnchatimg\" alt=\"Live Help\" border=\"0\" nocache src=\""+lhnJsHost+"www.livehelpnow.net/lhn/functions/imageserver.ashx?lhnid="+lhnAccountN+"&amp;navname=&amp;java=&amp;referrer=&amp;pagetitle=&amp;pageurl=&amp;t=f&amp;zimg="+lhnbutton+"&amp;d=0&amp;rndstr=999\" />";'.PHP_EOL;
-		$content .= 'element.insertBefore(lhnScript,element.firstChild);'.PHP_EOL;
-		$content .= '}else{'.PHP_EOL;
-		$content .= 'console.log(lhnbutton);var lhnScript = document.createElement("script");lhnScript.type = "text/javascript";lhnScript.src = lhnbutton;'.PHP_EOL;
-		$content .= 'element.appendChild(lhnScript);'.PHP_EOL;
-		$content .= '}'.PHP_EOL;
-		$content .= '}'.PHP_EOL;
 		$content .= '</script>'.PHP_EOL;
-		$content .= '<!--end http://www.livehelpnow.net  -->'.PHP_EOL;
+		$content .= '<a href="http://www.LiveHelpNow.net/" target="_blank" style="font-size:10px;" id="lhnHelp">Help Desk Software</a>'.PHP_EOL;
+		$content .= '<script src="//www.livehelpnow.net/lhn/widgets/chatbutton/lhnchatbutton-current.min.js" type="text/javascript" id="lhnscript"></script>'.PHP_EOL;
+
 		return $content;
 	}
 }

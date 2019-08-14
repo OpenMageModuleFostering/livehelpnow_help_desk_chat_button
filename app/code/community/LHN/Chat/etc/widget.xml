@@ -16,8 +16,40 @@
 				<visible>1</visible>
 				<label>LiveHelpNow Button Number</label>
 				<description><![CDATA[* Must be numeric<br /><a href="http://www.livehelpnow.net/products/live_chat_system/buttons/" target="_blank">View Buttons</a>]]></description>
+				<value>35</value>
 				<type>text</type>
 			</button_number>
+			<invite translate="label">
+				<required>1</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Automatic Chat Invite</label>
+				<type>select</type>
+				<source_model>adminhtml/system_config_source_yesno</source_model>
+			</invite>
+			<window_number translate="label">
+				<required>0</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Window ID</label>
+				<description><![CDATA[* Must be numeric<br />You can usaully leave this as 0 or blank]]></description>
+				<type>text</type>
+				<value>0</value>
+			</window_number>
+			<invitation_number translate="label">
+				<required>0</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Invitation ID</label>
+				<description><![CDATA[* Must be numeric<br />You can usaully leave this as 0 or blank]]></description>
+				<type>text</type>
+				<value>0</value>
+			</invitation_number>
+			<department_number translate="label">
+				<required>0</required>
+				<visible>1</visible>
+				<label>LiveHelpNow Department ID</label>
+				<description><![CDATA[* Must be numeric<br />You can usaully leave this as 0 or blank]]></description>
+				<type>text</type>
+				<value>0</value>
+			</department_number>
 		</parameters>
 	</chat_button>
 </widgets>

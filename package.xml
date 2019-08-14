@@ -1,26 +1,27 @@
 <?xml version="1.0"?>
 <package>
     <name>LiveHelpNow_Help_Desk_Chat_Button</name>
-    <version>1.0.4</version>
+    <version>1.1.1</version>
     <stability>stable</stability>
     <license>GNU General Public License (GPL)</license>
     <channel>community</channel>
     <extends/>
     <summary>Chat with customers on your website using the top rated LiveHelpNow Chat System.</summary>
-    <description>LiveHelpNow is a responsive, reliable, and extremely affordable Help Desk Software for your website. The LiveHelpNow live chat button plugin adds click-to-chat functionality to your website, allowing you to interact directly with website visitors the same way you would in a traditional retail store. You wouldn't ignore customers in your store, so don't ignore the ones visiting your site every day! &#xD;
-&#xD;
-Chat with customers using any computer or mobile device and monitor website visitors in real-time using our Top Rated Chat System. Invite visitors to chat automatically or proactively, help them with product selection, and increase sales! When you're unavailable the chat button plugin switches to an 'offline mode' that allows visitors to leave you messages. &#xD;
-&#xD;
-This plugin is exclusively for the LiveHelpNow Chat System &amp; also integrates seamlessly with: &#xD;
-&#x2022; LiveHelpNow Ticket System&#xD;
-&#x2022; LiveHelpNow Callback Request System&#xD;
-&#xD;
+    <description>LiveHelpNow is a responsive, reliable, and extremely affordable Help Desk Software for your website. The &lt;a href="http://www.livehelpnow.net"&gt;LiveHelpNow live chat button&lt;/a&gt; plugin adds click-to-chat functionality to your website, allowing you to interact directly with website visitors the same way you would in a traditional retail store. You wouldn't ignore customers in your store, so don't ignore the ones visiting your site every day!&#xD;
+&lt;br /&gt;&lt;br /&gt;&#xD;
+Chat with customers using any computer or mobile device and monitor website visitors in real-time using our Top Rated Chat System. Invite visitors to chat automatically or proactively, help them with product selection, and increase sales! When you're unavailable the chat button plugin switches to an 'offline mode' that allows visitors to leave you messages.&#xD;
+&lt;br /&gt;&lt;br /&gt;&#xD;
+This plugin is exclusively for the LiveHelpNow Chat System &amp; also integrates seamlessly with:&#xD;
+&lt;br /&gt;&#xD;
+&#x2022; LiveHelpNow Ticket System&lt;br /&gt;&#xD;
+&#x2022; LiveHelpNow Callback Request System&lt;br /&gt;&#xD;
+&lt;br /&gt;&#xD;
 This FREE plugin requires a PAID LiveHelpNow Subscription.</description>
-    <notes>Fixed issue where button would not show on mobile devices.</notes>
-    <authors><author><name>Eric Witchin</name><user>livehelpnow</user><email>plugins@livehelpnpw.com</email></author></authors>
-    <date>2013-04-15</date>
-    <time>15:11:09</time>
-    <contents><target name="magecommunity"><dir name="LHN"><dir name="Chat"><dir name="Block"><file name="Button.php" hash="fcd6fbf1efc3cefd47e5f554f2baaf06"/></dir><dir name="Helper"><file name="Data.php" hash="37de04c73ab2798399cc75e87c5217fd"/></dir><dir name="etc"><file name="config.xml" hash="6829a398d8d80b95f44b5da38c4c5ead"/><file name="widget.xml" hash="c7386c1c79330be2f9ed916feba76297"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="LHN_Chat.xml" hash="a8dafd55068822ec469356e6f8ebb55d"/></dir></target></contents>
+    <notes>Added more php version support</notes>
+    <authors><author><name>Eric Witchin</name><user>livehelpnow</user><email>plugins@livehelpnow.com</email></author></authors>
+    <date>2014-05-15</date>
+    <time>09:49:19</time>
+    <contents><target name="magecommunity"><dir name="LHN"><dir name="Chat"><dir name="Block"><file name="Button.php" hash="44001f1f296e14f03f6c6268175cc146"/></dir><dir name="Helper"><file name="Data.php" hash="37de04c73ab2798399cc75e87c5217fd"/></dir><dir name="etc"><file name="config.xml" hash="f543ed85946017f4654cdb6c3c6a75c5"/><file name="widget.xml" hash="76b91ce4343a6bf7dc17f58fc16ff5e0"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="LHN_Chat.xml" hash="a8dafd55068822ec469356e6f8ebb55d"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.3.0</min><max>5.5.99</max></php></required></dependencies>
 </package>
